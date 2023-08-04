@@ -1,0 +1,8 @@
+# CMSIS Build Audit File generated on 2023-08-05T00:02:40
+
+# Project Description File: d:/OneDrive - email.szu.edu.cn/Codes/Github insiders/Examples/10-2 RNW MPU6050 via Hardware/Project+Target_1.cprj
+
+# Toolchain Configuration File: C:/Users/Wendo/.vcpkg/artifacts/fd3d78d7/tools.open.cmsis.pack.cmsis.toolbox/2.0.0/etc/AC6.6.18.0.cmake
+
+# Package: Keil.STM32F1xx_DFP.2.4.1
+  Location: C:\Users\Wendo\AppData\Local\Arm\Packs/Keil/STM32F1xx_DFP/2.4.1/
