@@ -3,6 +3,19 @@
 
 #define SlaveAddress 0xD0 //MPU6050的从机地址
 
+void MPU6050_WaitEvent(I2C_TypeDef* I2Cx, uint32_t I2C_EVENT)//给CheckEvent函数封装一个延时函数，防止死机
+{
+    uint32_t timeout=10000;
+    while(I2C_CheckEvent(I2Cx, I2C_EVENT)!=SUCCESS)
+    {
+        timeout--;
+        if(timeout==0)
+        {
+            break;//超时退出。这里可以加入其他处理，比如重新初始化I2C等等升级操作及处理
+        }
+    }
+}
+
 //封装指定地址的写操作
 void MPU6050_WriteReg(uint8_t reg, uint8_t data)
 {
@@ -18,13 +31,13 @@ void MPU6050_WriteReg(uint8_t reg, uint8_t data)
     */
     //上面软件的函数都有Delay，是阻塞式的，下面的函数是硬件的、非阻塞式的，要等待响应标志位，确保执行完毕
     I2C_GenerateSTART(I2C2,ENABLE);//产生起始位
-    while(I2C_CheckEvent(I2C2,I2C_EVENT_MASTER_MODE_SELECT)!=SUCCESS)//等待起始位发送完毕,即EV5
+    MPU6050_WaitEvent(I2C2,I2C_EVENT_MASTER_MODE_SELECT);//等待起始位发送完毕,即EV5
     I2C_Send7bitAddress(I2C2, SlaveAddress, I2C_Direction_Transmitter);//发送从机地址。自带应答。
-    while(I2C_CheckEvent(I2C2,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)!=SUCCESS);//等待从机应答,即EV6
+    MPU6050_WaitEvent(I2C2,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED);//等待从机应答,即EV6
     I2C_SendData(I2C2,reg);//发送寄存器地址
-    while(I2C_CheckEvent(I2C2,I2C_EVENT_MASTER_BYTE_TRANSMITTING)!=SUCCESS);//等待数据发送完毕,即EV8
+    MPU6050_WaitEvent(I2C2,I2C_EVENT_MASTER_BYTE_TRANSMITTING);//等待数据发送完毕,即EV8
     I2C_SendData(I2C2,data);//发送数据
-    while(!I2C_CheckEvent(I2C2,I2C_EVENT_MASTER_BYTE_TRANSMITTED));//发送多字节时，等待EV8_2,最后一个字节发送完毕
+    MPU6050_WaitEvent(I2C2,I2C_EVENT_MASTER_BYTE_TRANSMITTED);//发送多字节时，等待EV8_2,最后一个字节发送完毕
     I2C_GenerateSTOP(I2C2,ENABLE);//产生停止位
 
 }
@@ -52,23 +65,23 @@ uint8_t MPU6050_ReadReg(uint8_t reg)
     uint8_t data;
     //设置MPU6050当前地址指针
     I2C_GenerateSTART(I2C2,ENABLE);//产生起始位
-    while(I2C_CheckEvent(I2C2,I2C_EVENT_MASTER_MODE_SELECT)!=SUCCESS);//等待起始位发送完毕,即EV5
+    MPU6050_WaitEvent(I2C2,I2C_EVENT_MASTER_MODE_SELECT);//等待起始位发送完毕,即EV5
     I2C_Send7bitAddress(I2C2, SlaveAddress, I2C_Direction_Transmitter);//发送从机地址。自带应答。
-    while(I2C_CheckEvent(I2C2,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)!=SUCCESS);//等待从机应答,即EV6
+    MPU6050_WaitEvent(I2C2,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED);//等待从机应答,即EV6
     I2C_SendData(I2C2,reg);//发送寄存器地址
-    while(I2C_CheckEvent(I2C2,I2C_EVENT_MASTER_BYTE_TRANSMITTED)!=SUCCESS);//等待最后一个字节发送完毕,即EV8_2
+    MPU6050_WaitEvent(I2C2,I2C_EVENT_MASTER_BYTE_TRANSMITTED);//等待最后一个字节发送完毕,即EV8_2
     //重新寻址
     I2C_GenerateSTART(I2C2,ENABLE);//产生起始位
-    while(I2C_CheckEvent(I2C2,I2C_EVENT_MASTER_MODE_SELECT)!=SUCCESS);//等待起始位发送完毕,即EV5
+    MPU6050_WaitEvent(I2C2,I2C_EVENT_MASTER_MODE_SELECT);//等待起始位发送完毕,即EV5
     I2C_Send7bitAddress(I2C2, SlaveAddress, I2C_Direction_Receiver);//发送从机地址,读操作
-    while(I2C_CheckEvent(I2C2,I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED)!=SUCCESS);//等待主机接受,即EV6。与上面的EV6不同
+    MPU6050_WaitEvent(I2C2,I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED);//等待主机接受,即EV6。与上面的EV6不同
     
 
     //如果要接收多个字节，则以下四行代码要放在循环中，前面只执行最后两行，计数到了最后一个字节则四行都执行
     //对于最后一个字节，要提前应答位ACK置0，停止条件生成位stop置1
     I2C_AcknowledgeConfig(I2C2,DISABLE);//只读取一个字节，所以最后一个字节需要发送NACK
     I2C_GenerateSTOP(I2C2,ENABLE);//产生停止位
-    while(I2C_CheckEvent(I2C2,I2C_EVENT_MASTER_BYTE_RECEIVED)!=SUCCESS);//等待数据接收完毕,即EV7
+    MPU6050_WaitEvent(I2C2,I2C_EVENT_MASTER_BYTE_RECEIVED);//等待数据接收完毕,即EV7
     //接收数据
     data = I2C_ReceiveData(I2C2);
 
