@@ -1,38 +1,40 @@
 # ninja log v5
-0	61	0	CMakeFiles/database	44e87e6a401715b9
-0	61	0	D:/OneDrive - email.szu.edu.cn/Codes/Github insiders/Examples/10-2 RNW MPU6050 via Hardware/tmp/Project/Target_1/CMakeFiles/database	44e87e6a401715b9
-2	273	7128681618056839	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Hardware/IIC.o	10ccecb9fe5c805
-14	295	7128681618426912	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Hardware/Key.o	6ea8f6f46e9c2c6e
-21	354	7128681619037379	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Hardware/LED.o	5f5605f25631dcc6
-8	381	7128681618977366	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Hardware/MPU6050.o	d2fd43b4933b71e0
-92	473	7128681619712712	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_bkp.o	232f713369b7bfb7
-35	519	7128681619932304	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Hardware/OLED.o	408e564289cdeaf5
-101	549	7128681620402396	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/misc.o	45d0ddf5f291457e
-50	562	7128681620422383	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_adc.o	47b64b58484c9fdf
-296	628	7128681621843838	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_crc.o	7bb21ad227b5740b
-275	756	7128681622801499	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_cec.o	37e953539d85fdc7
-355	766	7128681622891488	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_dac.o	ff0250bd9338fac8
+3	455	7129261514809462	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Hardware/MPU6050.o	d2fd43b4933b71e0
+1	103	0	CMakeFiles/database	44e87e6a401715b9
+15	463	7129261514789471	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Hardware/IIC.o	10ccecb9fe5c805
+1	103	0	D:/OneDrive - email.szu.edu.cn/Codes/Github insiders/Examples/10-2 RNW MPU6050 via Hardware/tmp/Project/Target_1/CMakeFiles/database	44e87e6a401715b9
+9	439	7129261514959462	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Hardware/Key.o	6ea8f6f46e9c2c6e
+22	447	7129261514809462	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Hardware/LED.o	5f5605f25631dcc6
+29	397	7129261514899463	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_bkp.o	232f713369b7bfb7
+37	482	7129261514879479	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Hardware/OLED.o	408e564289cdeaf5
+1610	1920	7129261530306957	D:/OneDrive - email.szu.edu.cn/Codes/Github insiders/Examples/10-2 RNW MPU6050 via Hardware/out/Project/Target_1/Project.axf	24fef45625321c6a
+49	378	7129261514839451	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/misc.o	45d0ddf5f291457e
+62	472	7129261515194737	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_adc.o	47b64b58484c9fdf
+398	707	7129261517955185	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_crc.o	7bb21ad227b5740b
+1274	1595	7129261527022400	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/System/Delay.o	359fcc5cbfaae3bb
+440	728	7129261517785184	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_cec.o	37e953539d85fdc7
+379	653	7129261517545178	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_dac.o	ff0250bd9338fac8
+1133	1428	7129261525339168	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Start/system_stm32f10x.o	fe73b5e94dd0c56a
 474	888	7128681623948180	CMakeFiles/Project.dir/71ca556ab2a76501f88f78fd13863f4e/Examples/10-2_RNW_MPU6050_via_Hardware/Start/startup_stm32f10x_md.o	bb8e09618a4df04d
-563	995	7128681624703488	CMakeFiles/Project.dir/71ca556ab2a76501f88f78fd13863f4e/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_dbgmcu.o	6be45d205b769612
-382	1010	7128681624773505	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_can.o	fd9c2a2d58656aef
-520	1022	7128681625322923	CMakeFiles/Project.dir/71ca556ab2a76501f88f78fd13863f4e/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_flash.o	18f512676648503d
-629	1035	7128681625463015	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_exti.o	9fe48a81693f1c42
-550	1045	7128681625568239	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_dma.o	b30acf1c7aeb3b06
-757	1191	7128681626946126	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_gpio.o	c62ca3863cf9bb57
-766	1203	7128681627096141	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_iwdg.o	f73d2f126370d100
-888	1380	7128681629249429	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_i2c.o	4a3abf7867a39b1b
-1023	1489	7128681629858505	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_rtc.o	178002f179d3a49b
-1011	1500	7128681630227640	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_rcc.o	6f9e6b082b428070
-1036	1509	7128681630377754	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_sdio.o	f4a76e59fff677c4
-1046	1563	7128681630447759	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_pwr.o	2b28792132d0edf1
-995	1597	7128681631442621	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_fsmc.o	e249e7489b3bc6a8
-1203	1702	7128681632277219	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_spi.o	85ad17e7c295f27e
 1510	1813	7128681633601157	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Start/core_cm3.o	c1f21c2c31ee46ea
-1191	1837	7128681633861154	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_tim.o	e1035e65f75fd2f7
-1381	1903	7128681634569928	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_wwdg.o	32ae2707c2db5bd6
-1500	1938	7128681634839921	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Start/system_stm32f10x.o	fe73b5e94dd0c56a
-1703	2002	7128681635477469	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/System/Delay.o	359fcc5cbfaae3bb
-1490	2015	7128681635507451	CMakeFiles/Project.dir/71ca556ab2a76501f88f78fd13863f4e/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_usart.o	76785bc0fceef35a
-1563	2022	7128681635602693	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/User/main.o	649069d99517b255
-1598	2043	7128681635918548	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/User/stm32f10x_it.o	100d7c5bf08237
-2044	2204	7128681637566072	D:/OneDrive - email.szu.edu.cn/Codes/Github insiders/Examples/10-2 RNW MPU6050 via Hardware/out/Project/Target_1/Project.axf	24fef45625321c6a
+464	718	7129261518055714	CMakeFiles/Project.dir/71ca556ab2a76501f88f78fd13863f4e/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_dbgmcu.o	6be45d205b769612
+483	809	7129261519011990	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_dma.o	b30acf1c7aeb3b06
+448	895	7129261519548527	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_can.o	fd9c2a2d58656aef
+456	840	7129261519403632	CMakeFiles/Project.dir/71ca556ab2a76501f88f78fd13863f4e/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_flash.o	18f512676648503d
+473	797	7129261518812001	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_exti.o	9fe48a81693f1c42
+708	1017	7129261521204107	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_gpio.o	c62ca3863cf9bb57
+729	1009	7129261521158917	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_iwdg.o	f73d2f126370d100
+654	1167	7129261522419167	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_i2c.o	4a3abf7867a39b1b
+896	1176	7129261522579174	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_rtc.o	178002f179d3a49b
+810	1273	7129261523049424	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_rcc.o	6f9e6b082b428070
+798	1132	7129261522249182	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_sdio.o	f4a76e59fff677c4
+841	1232	7129261523159423	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_pwr.o	2b28792132d0edf1
+718	1212	7129261522929211	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_fsmc.o	e249e7489b3bc6a8
+1018	1393	7129261524956166	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_spi.o	85ad17e7c295f27e
+1010	1599	7129261527042498	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_tim.o	e1035e65f75fd2f7
+1176	1503	7129261526026137	CMakeFiles/Project.dir/1b1ce569632f170942f38e1cbfe1967d/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_wwdg.o	32ae2707c2db5bd6
+1168	1610	7129261527132490	CMakeFiles/Project.dir/71ca556ab2a76501f88f78fd13863f4e/Examples/10-2_RNW_MPU6050_via_Hardware/Library/stm32f10x_usart.o	76785bc0fceef35a
+1232	1498	7129261525946173	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/User/main.o	649069d99517b255
+1212	1518	7129261526241341	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/User/stm32f10x_it.o	100d7c5bf08237
+3	130	7129262742191800	CMakeFiles/Project.dir/D_/OneDrive_-_email.szu.edu.cn/Codes/Github_insiders/Examples/10-2_RNW_MPU6050_via_Hardware/Hardware/MPU6050.o	d2fd43b4933b71e0
+130	223	7129262743130586	D:/OneDrive - email.szu.edu.cn/Codes/Github insiders/Examples/10-2 RNW MPU6050 via Hardware/out/Project/Target_1/Project.axf	24fef45625321c6a

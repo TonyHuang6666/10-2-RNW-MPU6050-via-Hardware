@@ -1,7 +1,6 @@
 #include "stm32f10x.h"                  // Device header
 #include "Delay.h"
 #include "OLED.h"
-#include "IIC.h"
 #include "MPU6050.h"
 int16_t AccX,AccY,AccZ,GyroX,GyroY,GyroZ;//定义存储加速度计和陀螺仪数据的变量
 uint8_t ID;

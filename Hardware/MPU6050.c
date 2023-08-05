@@ -1,12 +1,12 @@
 #include "stm32f10x.h"
 #include "MPU6050_Reg.h"
 
-#include "IIC.h"//建立在此模块上
 #define SlaveAddress 0xD0 //MPU6050的从机地址
 
 //封装指定地址的写操作
 void MPU6050_WriteReg(uint8_t reg, uint8_t data)
 {
+    /*
     IIC_Start();
     IIC_SendByte(SlaveAddress);
     IIC_ReceiveACK();
@@ -15,11 +15,22 @@ void MPU6050_WriteReg(uint8_t reg, uint8_t data)
     IIC_SendByte(data);
     IIC_ReceiveACK();
     IIC_Pause();
+    */
+    I2C_GenerateSTART(I2C2,ENABLE);//产生起始位
+    I2C_Send7bitAddress(I2C2, SlaveAddress, I2C_Direction_Transmitter);//发送从机地址
+    while(!I2C_CheckEvent(I2C2,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));//等待从机应答
+    I2C_SendData(I2C2,reg);//发送寄存器地址
+    while(!I2C_CheckEvent(I2C2,I2C_EVENT_MASTER_BYTE_TRANSMITTED));//等待数据发送完毕
+    I2C_SendData(I2C2,data);//发送数据
+    while(!I2C_CheckEvent(I2C2,I2C_EVENT_MASTER_BYTE_TRANSMITTED));//等待数据发送完毕
+    I2C_GenerateSTOP(I2C2,ENABLE);//产生停止位
+
 }
 
 //封装指定地址的读操作
 uint8_t MPU6050_ReadReg(uint8_t reg)
 {
+    /*
     uint8_t data;
     //设置MPU6050当前地址指针
     IIC_Start();
@@ -35,11 +46,49 @@ uint8_t MPU6050_ReadReg(uint8_t reg)
     IIC_SendACK(1);//只读取一个字节，所以最后一个字节需要发送NACK
     IIC_Pause();
     return data;
+    */
+    uint8_t data;
+    //设置MPU6050当前地址指针
+    I2C_GenerateSTART(I2C2,ENABLE);//产生起始位
+    I2C_Send7bitAddress(I2C2, SlaveAddress, I2C_Direction_Transmitter);//发送从机地址
+    while(!I2C_CheckEvent(I2C2,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));//等待从机应答
+    I2C_SendData(I2C2,reg);//发送寄存器地址
+    while(!I2C_CheckEvent(I2C2,I2C_EVENT_MASTER_BYTE_TRANSMITTED));//等待数据发送完毕
+    //重新寻址
+    I2C_GenerateSTART(I2C2,ENABLE);//产生起始位
+    I2C_Send7bitAddress(I2C2, SlaveAddress, I2C_Direction_Receiver);//发送从机地址,读操作
+    while(!I2C_CheckEvent(I2C2,I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED));//等待从机应答
+    //接收数据
+    data = I2C_ReceiveData(I2C2);
+    I2C_AcknowledgeConfig(I2C2,DISABLE);//只读取一个字节，所以最后一个字节需要发送NACK
+    I2C_GenerateSTOP(I2C2,ENABLE);//产生停止位
+    return data;
 }
 
 void MPU6050_Init(void)
 {
-    IIC_Init();
+
+    //IIC初始化
+    //1.GPIO初始化
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);
+    GPIO_InitTypeDef GPIO_InitStructure;
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10|GPIO_Pin_11;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_OD;//复用：引脚控制外设 开漏：IIC的时钟线是双向的
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOB,&GPIO_InitStructure);
+    //2.IIC初始化
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C2,ENABLE);//是APB1的外设
+    I2C_InitTypeDef I2C_InitStructure;
+    I2C_StructInit(&I2C_InitStructure);
+    I2C_InitStructure.I2C_Mode = I2C_Mode_I2C;//I2C模式
+    I2C_InitStructure.I2C_Ack = I2C_Ack_Enable;//使能应答
+    I2C_InitStructure.I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;//7位地址
+    I2C_InitStructure.I2C_ClockSpeed = 400000;//400KHz
+    I2C_InitStructure.I2C_DutyCycle = I2C_DutyCycle_2;//占空比2
+    I2C_InitStructure.I2C_OwnAddress1 = 0x00;//主机地址
+    I2C_Init(I2C2,&I2C_InitStructure);
+    I2C_Cmd(I2C2, ENABLE);
+
     //1.配置电源管理器
     MPU6050_WriteReg(MPU6050_PWR_MGMT_1,0x01);//解除睡眠，选择时钟源为陀螺仪时钟
     MPU6050_WriteReg(MPU6050_PWR_MGMT_2,0x00);//不待机

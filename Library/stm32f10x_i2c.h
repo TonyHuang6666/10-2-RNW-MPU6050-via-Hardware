@@ -530,8 +530,8 @@ typedef struct
   * @{
   */
 
-void I2C_DeInit(I2C_TypeDef* I2Cx);
-void I2C_Init(I2C_TypeDef* I2Cx, I2C_InitTypeDef* I2C_InitStruct);
+void I2C_DeInit(I2C_TypeDef* I2Cx);//I2C外设初始化
+void I2C_Init(I2C_TypeDef* I2Cx, I2C_InitTypeDef* I2C_InitStruct);//I2C外设初始化
 void I2C_StructInit(I2C_InitTypeDef* I2C_InitStruct);
 void I2C_Cmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
 void I2C_DMACmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
@@ -569,7 +569,7 @@ void I2C_FastModeDutyCycleConfig(I2C_TypeDef* I2Cx, uint16_t I2C_DutyCycle);
  *  depending on the application requirements and constraints:
  *        
  *  
- * 1) Basic state monitoring:
+ * 1) Basic state monitoring://推荐用于监控状态
  *    Using I2C_CheckEvent() function:
  *    It compares the status registers (SR1 and SR2) content to a given event
  *    (can be the combination of one or more flags).
